@@ -1,0 +1,19 @@
+language: java
+
+# Use container-based infrastructure:
+sudo: false
+
+#addons:
+#  apt:
+#    sources:
+#      - debian-sid
+#    packages:
+#      - libssl1.0.0
+
+notifications:
+  email: false
+
+# Skip "install" stage:
+install: true
+
+script: ./travis.sh
