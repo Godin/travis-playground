@@ -3,12 +3,13 @@ language: java
 # Use container-based infrastructure:
 sudo: false
 
-#addons:
-#  apt:
-#    sources:
-#      - debian-sid
-#    packages:
-#      - libssl1.0.0
+addons:
+  apt:
+    sources:
+      - debian-sid
+    packages:
+      - libssl1.0.0
+      - g++-multilib
 
 notifications:
   email: false
