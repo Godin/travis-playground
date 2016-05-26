@@ -1,0 +1,14 @@
+matrix:
+  include:
+    - sudo: required
+    - sudo: false
+    - sudo: required
+      dist: trusty
+
+notifications:
+  email: false
+
+# Skip "install" stage:
+install: true
+
+script: ./travis.sh
