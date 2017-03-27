@@ -1,0 +1,16 @@
+before_install: echo "before_install"
+
+install: echo "install"
+
+before_script: echo "before_script"
+
+matrix:
+  fast_finish: true
+  include:
+    - jdk: oraclejdk8
+      env:
+        - CMD="echo OK $SONARQUBE_COMMAND"
+
+script:
+  - export SONARQUBE_COMMAND="sonarqube ${FAKE_TOKEN}"
+  - eval "$CMD"
